@@ -32,4 +32,12 @@ public class PalabrasPorInicial {
         return false;
     }
 
+    public boolean existePalabra(String palabra) {
+        char inicial = Character.toLowerCase(palabra.charAt(0));
+        List<String> palabrasIniciales = palabras.get(inicial);
+        if (palabrasIniciales != null) {
+            return palabrasIniciales.contains(palabra.toLowerCase());
+        }
+        return false;
+    }
 }
