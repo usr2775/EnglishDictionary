@@ -39,5 +39,14 @@ public class PalabrasPorInicial {
             return palabrasIniciales.contains(palabra.toLowerCase());
         }
         return false;
+
+        public List<String> obtenerPalabras(char inicial) {
+            return palabras.getOrDefault(inicial, Collections.emptyList());
+        }
+    
+        public Set<Character> obtenerIniciales() {
+            return palabras.keySet();
+        }
+    
     }
 }
