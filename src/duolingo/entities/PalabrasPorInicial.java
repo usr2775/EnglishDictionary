@@ -19,4 +19,17 @@ public class PalabrasPorInicial {
             lista.add(palabra);
         }
     }
+
+    public boolean eliminarPalabra(String palabra) {
+        char inicial = Character.toLowerCase(palabra.charAt(0));
+        List<String> palabrasIniciales = palabras.get(inicial);
+        if (palabrasIniciales != null && palabrasIniciales.remove(palabra.toLowerCase())) {
+            if (palabrasIniciales.isEmpty()) {
+                palabras.remove(inicial);
+            }
+            return true;
+        }
+        return false;
+    }
+
 }
