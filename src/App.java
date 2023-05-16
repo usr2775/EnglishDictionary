@@ -1,8 +1,7 @@
 import duolingo.entities.*;
-import duolingo.util.*;
+
 
 import java.util.*;
-
 
 public class App {
     public static void main(String[] args) {
@@ -50,7 +49,7 @@ public class App {
                     break;
 
                 case 4:
-                    System.out.println("Iniciales disponibles: " + diccionario.obtenerIniciales()));
+                    System.out.println("Iniciales disponibles: " + diccionario.obtenerIniciales());
                     break;
                 case 5:
                     System.out.print("Introduzca la letra de la inicial que desea buscar: ");
