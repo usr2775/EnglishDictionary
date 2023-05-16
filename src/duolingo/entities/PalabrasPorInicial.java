@@ -1,5 +1,8 @@
 package duolingo.entities;
+
 import java.util.*;
+
+import duolingo.util.SanitizarPalabra;
 
 public class PalabrasPorInicial {
     private Map<Character, List<String>> palabras;
@@ -9,7 +12,7 @@ public class PalabrasPorInicial {
     }
 
     public void agregarPalabra(String palabra) {
-        String palabraSanitizada = SanitizarPalabras.sanitizarPalabra(palabra);
+        String palabraSanitizada = SanitizarPalabra.sanitizarPalabra(palabra);
         char inicial = palabraSanitizada.charAt(0);
         if (!palabras.containsKey(inicial)) {
             palabras.put(inicial, new ArrayList<>());
@@ -39,14 +42,14 @@ public class PalabrasPorInicial {
             return palabrasIniciales.contains(palabra.toLowerCase());
         }
         return false;
-
-        public List<String> obtenerPalabras(char inicial) {
-            return palabras.getOrDefault(inicial, Collections.emptyList());
-        }
-    
-        public Set<Character> obtenerIniciales() {
-            return palabras.keySet();
-        }
-    
     }
+
+    public List<String> obtenerPalabras(char inicial) {
+        return palabras.getOrDefault(inicial, Collections.emptyList());
+    }
+
+    public Set<Character> obtenerIniciales() {
+        return palabras.keySet();
+    }
+
 }
