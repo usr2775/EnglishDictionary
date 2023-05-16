@@ -1,18 +1,8 @@
-## Getting Started
+Proyecto: Diccionario de palabras clasificadas por la inicial
+Necesidad: Proporcionar una herramienta para almacenar palabras en un diccionario y clasificarlas por su inicial, para poder buscarlas y acceder a ellas de manera más eficiente.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Clases implementadas:
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+PalabrasPorInicial: Clase que almacena palabras clasificándolas por la inicial en una estructura de datos tipo Map. Contiene métodos para agregar palabras, obtener palabras por inicial y obtener iniciales.
+Main: Clase ejecutable que contiene un menú con opciones para añadir palabras, eliminar palabras, buscar palabras, mostrar iniciales disponibles y ver palabras por inicial.
+Nota: Las palabras introducidas por el usuario son sanitizadas para su comparación y almacenamiento sin tener en cuenta el uso de mayúsculas o espacios.
